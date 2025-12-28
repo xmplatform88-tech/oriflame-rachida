@@ -15,7 +15,7 @@ body {
   margin: 40px auto;
   padding: 0 15px;
 }
-
+ https://xmplatform88-tech.github.io/oriflame-rachida/
 .btn {
   display: inline-block;
   padding: 12px 20px;
@@ -221,6 +221,58 @@ body {
 .back-btn:hover {
   background-color: #e91e63;
   transform: translateX(-3px);
+}
+
+.image-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+  background: #fff;
+}
+/* زر الرجوع */
+.back-btn {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px 18px;
+  background-color: #f48fb1;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: #e91e63;
+  transform: translateX(-3px);
+}
+
+/* البحث */
+.search-box {
+  max-width: 400px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 30px;
+  border: 1px solid #f48fb1;
+  font-size: 16px;
+  outline: none;
+}
+
+/* تكبير الصور */
+.image-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
 
 .image-modal img {
