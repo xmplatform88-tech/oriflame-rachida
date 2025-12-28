@@ -1,3 +1,63 @@
-<!-- نفس makeup.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>العناية بالبشرة</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<a href="products.html" class="back-btn">⬅️ الرجوع للمجموعات</a>
+
 <h2 class="section-title">🧴 العناية بالبشرة</h2>
-<img src="images/skincare1.jpg">
+
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="🔍 ابحثي عن منتج..." onkeyup="searchProducts()">
+</div>
+
+<div class="products-grid">
+
+  <div class="product-card">
+    <img src="images/skincare1.jpg" onclick="openImage(this.src)">
+    <h3>كريم مرطب للبشرة</h3>
+    <p>ترطيب عميق ونعومة</p>
+  </div>
+
+  <div class="product-card">
+    <img src="images/skincare2.jpg" onclick="openImage(this.src)">
+    <h3>غسول الوجه</h3>
+    <p>تنظيف لطيف يومي</p>
+  </div>
+
+</div>
+
+<!-- نافذة تكبير الصورة -->
+<div id="imageModal" class="image-modal" onclick="closeImage()">
+  <img id="modalImg">
+</div>
+
+<script>
+function searchProducts() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let products = document.querySelectorAll(".product-card");
+
+  products.forEach(product => {
+    product.style.display = product.innerText.toLowerCase().includes(input)
+      ? "block" : "none";
+  });
+}
+
+function openImage(src) {
+  document.getElementById("modalImg").src = src;
+  document.getElementById("imageModal").style.display = "flex";
+}
+
+function closeImage() {
+  document.getElementById("imageModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
