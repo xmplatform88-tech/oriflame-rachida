@@ -94,3 +94,96 @@ body {
   max-height: 90%;
   border-radius: 15px;
 }
+body {
+  font-family: "Cairo", sans-serif;
+  background: #fdf6f9;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* العناوين */
+.section-title {
+  color: #c2185b;
+  margin: 30px 0 10px;
+  font-size: 26px;
+}
+
+/* زر الرجوع */
+.back-btn {
+  display: inline-block;
+  margin: 20px;
+  color: #c2185b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* البحث */
+.search-box {
+  margin: 20px auto;
+}
+
+.search-box input {
+  padding: 12px;
+  width: 80%;
+  max-width: 350px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+/* شبكة المنتجات */
+.products-grid {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* بطاقة المنتج */
+.product-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* الصور */
+.product-card img {
+  width: 100%;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* زر واتساب العائم */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #25d366;
+  color: #fff;
+  font-size: 26px;
+  padding: 14px 16px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+/* تكبير الصور */
+.image-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.image-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+}
