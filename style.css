@@ -187,3 +187,68 @@ body {
   max-height: 90%;
   border-radius: 15px;
 }
+.header {
+  background: linear-gradient(135deg, #f8bbd0, #fce4ec);
+  padding: 60px 20px;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 10px 30px rgba(194,24,91,0.2);
+}
+
+.header h1 {
+  font-size: 36px;
+  color: #880e4f;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 18px;
+  color: #555;
+}
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #c2185b, #e91e63);
+  color: #fff;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+  box-shadow: 0 6px 18px rgba(194,24,91,0.4);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(194,24,91,0.5);
+}
+.product-card {
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+.section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  background: #e91e63;
+  bottom: 0;
+  right: 20%;
+  border-radius: 5px;
+}
+p {
+  line-height: 1.8;
+  color: #555;
+}
+.products-grid {
+  margin-top: 20px;
+}
