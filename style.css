@@ -128,3 +128,29 @@ body {
   text-align: center;
   margin-top: 40px;
 }
+.categories {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.category-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.category-card h2 {
+  color: #c2185b;
+  margin-bottom: 10px;
+}
+
+.category-card p {
+  color: #555;
+  margin-bottom: 20px;
+}
