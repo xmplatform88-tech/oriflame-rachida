@@ -252,3 +252,52 @@ p {
 .products-grid {
   margin-top: 20px;
 }
+.products-section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.page-title {
+  color: #c2185b;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.group-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px 20px;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.group-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.group-card .icon {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.group-card h3 {
+  color: #c2185b;
+  margin-bottom: 10px;
+}
+
+.group-card p {
+  font-size: 14px;
+  color: #666;
+}
