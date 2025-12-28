@@ -9,33 +9,79 @@
 
 <body>
 
-  <header class="header">
-    <h1>مجموعات منتجات Oriflame</h1>
-    <p>اختاري المجموعة لي كتهمك 🌸</p>
-    <a href="index.html" class="btn secondary">الرجوع للرئيسية</a>
-  </header>
+  <!-- Header -->
+  <div class="header">
+    <h1>منتجات Oriflame</h1>
+    <p>اختاري المجموعة اللي كتناسِبك 🌸</p>
+  </div>
 
-  <main class="container categories">
+  <!-- Search -->
+  <div class="search-box">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="🔍 ابحثي عن منتج..."
+      onkeyup="searchProducts()">
+  </div>
 
-    <div class="category-card">
-      <h2>💄 منتجات التجميل</h2>
-      <p>مكياج بجودة عالية وألوان عصرية</p>
-      <a href="makeup.html" class="btn">عرض المنتجات</a>
+  <!-- Products Grid -->
+  <div class="products-grid">
+
+    <!-- Makeup -->
+    <div class="product-card">
+      <img src="images/makeup1.jpg" alt="منتجات التجميل" onclick="openImage(this.src)">
+      <h3>💄 منتجات التجميل</h3>
+      <p>أحمر شفاه، ماسكارا، كريم أساس بجودة عالية</p>
+      <a href="makeup.html" class="btn">عرض المجموعة</a>
     </div>
 
-    <div class="category-card">
-      <h2>🧴 العناية بالبشرة</h2>
-      <p>روتين صحي لبشرة مشرقة</p>
-      <a href="skincare.html" class="btn">عرض المنتجات</a>
+    <!-- Skincare -->
+    <div class="product-card">
+      <img src="images/skincare1.jpg" alt="العناية بالبشرة" onclick="openImage(this.src)">
+      <h3>🧴 العناية بالبشرة</h3>
+      <p>كريمات، منظفات، ماسكات لجميع أنواع البشرة</p>
+      <a href="skincare.html" class="btn">عرض المجموعة</a>
     </div>
 
-    <div class="category-card">
-      <h2>🌸 العطور</h2>
+    <!-- Perfume -->
+    <div class="product-card">
+      <img src="images/perfume1.jpg" alt="عطور Oriflame" onclick="openImage(this.src)">
+      <h3>🌸 العطور</h3>
       <p>عطور نسائية ورجالية بثبات ممتاز</p>
-      <a href="perfume.html" class="btn">عرض المنتجات</a>
+      <a href="perfume.html" class="btn">عرض المجموعة</a>
     </div>
 
-  </main>
+  </div>
+
+  <!-- Image Popup -->
+  <div id="imageModal" class="image-modal" onclick="closeImage()">
+    <img id="modalImg">
+  </div>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/212687984742" class="whatsapp-float">💬</a>
+
+  <!-- Scripts -->
+  <script>
+    function searchProducts() {
+      let input = document.getElementById("searchInput").value.toLowerCase();
+      let products = document.querySelectorAll(".product-card");
+
+      products.forEach(function(product) {
+        let text = product.innerText.toLowerCase();
+        product.style.display = text.includes(input) ? "block" : "none";
+      });
+    }
+
+    function openImage(src) {
+      document.getElementById("modalImg").src = src;
+      document.getElementById("imageModal").style.display = "flex";
+    }
+
+    function closeImage() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
