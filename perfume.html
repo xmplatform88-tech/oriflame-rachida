@@ -2,39 +2,68 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>العطور | Oriflame مع رشيدة</title>
+  <title>العطور</title>
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
-  <header class="header">
-    <h1>🌸 العطور</h1>
-    <a href="products.html" class="btn secondary">⬅ الرجوع للمجموعات</a>
-  </header>
+<a href="products.html" class="back-btn">⬅️ الرجوع للمجموعات</a>
 
-  <main class="container">
+<h2 class="section-title">🌸 العطور</h2>
 
-    <div class="products-grid">
-      <div class="product-card">
-        <img src="https://via.placeholder.com/250">
-        <h3>عطر نسائي</h3>
-        <p>رائحة ناعمة وثبات ممتاز</p>
-      </div>
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="🔍 ابحثي عن عطر..." onkeyup="searchProducts()">
+</div>
 
-      <div class="product-card">
-        <img src="https://via.placeholder.com/250">
-        <h3>عطر رجالي</h3>
-        <p>لمسة فخمة تدوم</p>
-      </div>
-    </div>
+<div class="products-grid">
 
-    <div class="order-box">
-      <a href="https://wa.me/212687984742" class="btn whatsapp">اطلبي عبر واتساب</a>
-    </div>
+  <div class="product-card">
+    <img src="images/perfume1.jpg" onclick="openImage(this.src)">
+    <h3>عطر نسائي أنيق</h3>
+    <p>رائحة ناعمة تدوم طويلاً</p>
+  </div>
 
-  </main>
+  <div class="product-card">
+    <img src="images/perfume2.jpg" onclick="openImage(this.src)">
+    <h3>عطر رجالي فاخر</h3>
+    <p>ثبات قوي ولمسة فخامة</p>
+  </div>
+
+  <div class="product-card">
+    <img src="images/perfume3.jpg" onclick="openImage(this.src)">
+    <h3>عطر زهري</h3>
+    <p>منعش ومناسب للاستعمال اليومي</p>
+  </div>
+
+</div>
+
+<!-- نافذة تكبير الصورة -->
+<div id="imageModal" class="image-modal" onclick="closeImage()">
+  <img id="modalImg">
+</div>
+
+<script>
+function searchProducts() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let products = document.querySelectorAll(".product-card");
+
+  products.forEach(product => {
+    product.style.display = product.innerText.toLowerCase().includes(input)
+      ? "block" : "none";
+  });
+}
+
+function openImage(src) {
+  document.getElementById("modalImg").src = src;
+  document.getElementById("imageModal").style.display = "flex";
+}
+
+function closeImage() {
+  document.getElementById("imageModal").style.display = "none";
+}
+</script>
 
 </body>
 </html>
