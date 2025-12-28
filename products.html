@@ -4,101 +4,63 @@
   <meta charset="UTF-8">
   <title>المنتجات | Oriflame مع رشيدة</title>
   <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
 
-  <!-- HEADER -->
-  <header class="products-header">
-    <h1>المتجر</h1>
-    <p>اختاري القسم لي يعجبك وسولي عليه بسهولة</p>
-  </header>
+<header class="top">
+  <h1>🛍️ متجر Oriflame</h1>
+  <p>اكتشفي منتجات Oriflame الأصلية</p>
 
-  <!-- SEARCH -->
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="🔍 ابحثي عن قسم أو منتج...">
+  <input type="text" placeholder="ابحثي عن منتج أو قسم..." class="search">
+</header>
+
+<section class="sections">
+  <div class="card">
+    <h2>🧴 العناية بالبشرة</h2>
+    <p>كريمات، منظفات، ماسكات، سيروم</p>
   </div>
 
-  <!-- PRODUCTS -->
-  <section class="products-container" id="productsList">
-
-    <div class="product-card">
-      <h2>🧴 العناية بالبشرة</h2>
-      <p>كريمات، منظفات، ماسكات، سيروم</p>
-      <div class="buttons">
-        <a href="#" class="btn catalog">📘 الكاتالوج</a>
-        <a href="https://wa.me/212687984742?text=مرحبا رشيدة، بغيت نسول على منتجات العناية بالبشرة 🌸" class="btn whatsapp">💬 واتساب</a>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <h2>💄 منتجات التجميل</h2>
-      <p>أحمر شفاه، كريم أساس، ماسكارا</p>
-      <div class="buttons">
-        <a href="#" class="btn catalog">📘 الكاتالوج</a>
-        <a href="https://wa.me/212687984742?text=مرحبا رشيدة، بغيت نسول على منتجات التجميل 💄" class="btn whatsapp">💬 واتساب</a>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <h2>🌸 العطور</h2>
-      <p>نسائية – رجالية – ثبات عالي</p>
-      <div class="buttons">
-        <a href="#" class="btn catalog">📘 الكاتالوج</a>
-        <a href="https://wa.me/212687984742?text=مرحبا رشيدة، بغيت نسول على العطور 🌸" class="btn whatsapp">💬 واتساب</a>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <h2>🧖‍♀️ العناية بالشعر</h2>
-      <p>شامبو، ماسكات، زيوت</p>
-      <div class="buttons">
-        <a href="#" class="btn catalog">📘 الكاتالوج</a>
-        <a href="https://wa.me/212687984742?text=مرحبا رشيدة، بغيت نسول على منتجات الشعر 🧖‍♀️" class="btn whatsapp">💬 واتساب</a>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <h2>🛁 العناية بالجسم</h2>
-      <p>مرطبات، مقشرات، صابون</p>
-      <div class="buttons">
-        <a href="#" class="btn catalog">📘 الكاتالوج</a>
-        <a href="https://wa.me/212687984742?text=مرحبا رشيدة، بغيت نسول على منتجات الجسم 🛁" class="btn whatsapp">💬 واتساب</a>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <h2>🧔 منتجات رجالية</h2>
-      <p>عطور، عناية بالبشرة، حلاقة</p>
-      <div class="buttons">
-        <a href="#" class="btn catalog">📘 الكاتالوج</a>
-        <a href="https://wa.me/212687984742?text=مرحبا رشيدة، بغيت نسول على المنتجات الرجالية 🧔" class="btn whatsapp">💬 واتساب</a>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- BACK -->
-  <div class="back-home">
-    <a href="index.html" class="btn back">⬅️ الرجوع للرئيسية</a>
+  <div class="card">
+    <h2>💄 منتجات التجميل</h2>
+    <p>أحمر شفاه، كريم أساس، ماسكارا</p>
   </div>
 
-  <!-- FLOATING WHATSAPP -->
-  <a href="https://wa.me/212687984742" class="whatsapp-float">💬</a>
+  <div class="card">
+    <h2>🌸 العطور</h2>
+    <p>نسائية – رجالية – ثبات عالي</p>
+  </div>
 
-  <!-- SEARCH SCRIPT -->
-  <script>
-    const searchInput = document.getElementById("searchInput");
-    const cards = document.querySelectorAll(".product-card");
+  <div class="card">
+    <h2>🧖‍♀️ العناية بالشعر</h2>
+    <p>شامبو، بلسم، زيوت</p>
+  </div>
+</section>
 
-    searchInput.addEventListener("keyup", function () {
-      const value = searchInput.value.toLowerCase();
-      cards.forEach(card => {
-        card.style.display = card.innerText.toLowerCase().includes(value) ? "block" : "none";
-      });
-    });
-  </script>
+<section class="week">
+  <h2>⭐ منتج الأسبوع</h2>
+  <p>
+    كريم العناية بالبشرة من Oriflame  
+    <br>
+    محبوب عند الزبونات ونتائجه مضمونة
+  </p>
+</section>
+
+<section class="reviews">
+  <h2>💬 آراء الزبونات</h2>
+
+  <div class="review">"منتجات أصلية والنتائج بانوا من أول استعمال" – سعاد</div>
+  <div class="review">"تعامل راقي وتوصيل سريع" – نزهة</div>
+  <div class="review">"كننصح بهاد الصفحة" – أميمة</div>
+</section>
+
+<section class="actions">
+  <a href="#" class="btn catalog">📘 شاهدي الكاتالوج</a>
+  <a href="index.html" class="btn back">⬅️ الرجوع للرئيسية</a>
+</section>
+
+<footer>
+  © 2025 Oriflame مع رشيدة
+</footer>
 
 </body>
 </html>
