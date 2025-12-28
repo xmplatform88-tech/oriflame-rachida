@@ -3,117 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <title>المنتجات | Oriflame مع رشيدة</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
-<!-- ===== HEADER ===== -->
-<header class="header">
-  <h1>منتجات Oriflame</h1>
-  <p>اختاري القسم المناسب وطلبي عبر واتساب</p>
-</header>
+  <!-- HEADER -->
+  <header class="products-header">
+    <h1>المتجر</h1>
+    <p>اختاري القسم لي يعجبك وسولي عليه بسهولة</p>
+  </header>
 
-<!-- ===== PRODUCTS ===== -->
-<section class="products">
-
-  <!-- ===== SECTION: SKIN CARE ===== -->
-  <h2 class="section-title">🧴 العناية بالبشرة</h2>
-  <div class="product-grid">
-
-    <div class="product-card">
-      <h3>كريمات الوجه</h3>
-      <p>ترطيب، تفتيح، مكافحة التجاعيد</p>
-      <a href="https://wa.me/212600000000?text=مرحبا، بغيت نطلب كريمات الوجه من Oriflame"
-         class="btn" target="_blank">أطلبي الآن</a>
-    </div>
-
-    <div class="product-card">
-      <h3>منظفات البشرة</h3>
-      <p>غسول، تونر، مزيل مكياج</p>
-      <a href="https://wa.me/212600000000?text=مرحبا، بغيت نطلب منظفات البشرة من Oriflame"
-         class="btn" target="_blank">أطلبي الآن</a>
-    </div>
-
+  <!-- SEARCH -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="🔍 ابحثي عن قسم أو منتج...">
   </div>
 
-  <!-- ===== SECTION: MAKEUP ===== -->
-  <h2 class="section-title">💄 المكياج</h2>
-  <div class="product-grid">
+  <!-- PRODUCTS -->
+  <section class="products-container" id="productsList">
 
     <div class="product-card">
-      <h3>أحمر الشفاه</h3>
-      <p>ألوان ثابتة وجودة عالية</p>
-      <a href="https://wa.me/212600000000?text=مرحبا، بغيت نطلب أحمر الشفاه من Oriflame"
-         class="btn" target="_blank">أطلبي الآن</a>
+      <h2>🧴 العناية بالبشرة</h2>
+      <p>كريمات، منظفات، ماسكات، سيروم</p>
+      <div class="buttons">
+        <a href="#" class="btn catalog">📘 الكاتالوج</a>
+        <a href="https://wa.me/212687984742?text=مرحبا رشيدة، بغيت نسول على منتجات العناية بالبشرة 🌸" class="btn whatsapp">💬 واتساب</a>
+      </div>
     </div>
 
     <div class="product-card">
-      <h3>العيون</h3>
-      <p>ماسكارا، آيلاينر، ظلال عيون</p>
-      <a href="https://wa.me/212600000000?text=مرحبا، بغيت نطلب مكياج العيون من Oriflame"
-         class="btn" target="_blank">أطلبي الآن</a>
+      <h2>💄 منتجات التجميل</h2>
+      <p>أحمر شفاه، كريم أساس، ماسكارا</p>
+      <div class="buttons">
+        <a href="#" class="btn catalog">📘 الكاتالوج</a>
+        <a href="https://wa.me/212687984742?text=مرحبا رشيدة، بغيت نسول على منتجات التجميل 💄" class="btn whatsapp">💬 واتساب</a>
+      </div>
     </div>
 
     <div class="product-card">
-      <h3>الوجه</h3>
-      <p>كريم أساس، بودرة، بلاشر</p>
-      <a href="https://wa.me/212600000000?text=مرحبا، بغيت نطلب مكياج الوجه من Oriflame"
-         class="btn" target="_blank">أطلبي الآن</a>
+      <h2>🌸 العطور</h2>
+      <p>نسائية – رجالية – ثبات عالي</p>
+      <div class="buttons">
+        <a href="#" class="btn catalog">📘 الكاتالوج</a>
+        <a href="https://wa.me/212687984742?text=مرحبا رشيدة، بغيت نسول على العطور 🌸" class="btn whatsapp">💬 واتساب</a>
+      </div>
     </div>
 
+    <div class="product-card">
+      <h2>🧖‍♀️ العناية بالشعر</h2>
+      <p>شامبو، ماسكات، زيوت</p>
+      <div class="buttons">
+        <a href="#" class="btn catalog">📘 الكاتالوج</a>
+        <a href="https://wa.me/212687984742?text=مرحبا رشيدة، بغيت نسول على منتجات الشعر 🧖‍♀️" class="btn whatsapp">💬 واتساب</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <h2>🛁 العناية بالجسم</h2>
+      <p>مرطبات، مقشرات، صابون</p>
+      <div class="buttons">
+        <a href="#" class="btn catalog">📘 الكاتالوج</a>
+        <a href="https://wa.me/212687984742?text=مرحبا رشيدة، بغيت نسول على منتجات الجسم 🛁" class="btn whatsapp">💬 واتساب</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <h2>🧔 منتجات رجالية</h2>
+      <p>عطور، عناية بالبشرة، حلاقة</p>
+      <div class="buttons">
+        <a href="#" class="btn catalog">📘 الكاتالوج</a>
+        <a href="https://wa.me/212687984742?text=مرحبا رشيدة، بغيت نسول على المنتجات الرجالية 🧔" class="btn whatsapp">💬 واتساب</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- BACK -->
+  <div class="back-home">
+    <a href="index.html" class="btn back">⬅️ الرجوع للرئيسية</a>
   </div>
 
-  <!-- ===== SECTION: PERFUMES ===== -->
-  <h2 class="section-title">🌸 العطور</h2>
-  <div class="product-grid">
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/212687984742" class="whatsapp-float">💬</a>
 
-    <div class="product-card">
-      <h3>عطور نسائية</h3>
-      <p>روائح أنثوية بثبات ممتاز</p>
-      <a href="https://wa.me/212600000000?text=مرحبا، بغيت نطلب عطور نسائية من Oriflame"
-         class="btn" target="_blank">أطلبي الآن</a>
-    </div>
+  <!-- SEARCH SCRIPT -->
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const cards = document.querySelectorAll(".product-card");
 
-    <div class="product-card">
-      <h3>عطور رجالية</h3>
-      <p>روائح قوية وأنيقة</p>
-      <a href="https://wa.me/212600000000?text=مرحبا، بغيت نطلب عطور رجالية من Oriflame"
-         class="btn" target="_blank">أطلبي الآن</a>
-    </div>
-
-  </div>
-
-  <!-- ===== SECTION: BODY & HAIR ===== -->
-  <h2 class="section-title">🧼 الجسم و الشعر</h2>
-  <div class="product-grid">
-
-    <div class="product-card">
-      <h3>العناية بالجسم</h3>
-      <p>كريمات، لوشن، جل استحمام</p>
-      <a href="https://wa.me/212600000000?text=مرحبا، بغيت نطلب منتجات العناية بالجسم من Oriflame"
-         class="btn" target="_blank">أطلبي الآن</a>
-    </div>
-
-    <div class="product-card">
-      <h3>العناية بالشعر</h3>
-      <p>شامبو، بلسم، ماسكات</p>
-      <a href="https://wa.me/212600000000?text=مرحبا، بغيت نطلب منتجات العناية بالشعر من Oriflame"
-         class="btn" target="_blank">أطلبي الآن</a>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ===== BACK BUTTON ===== -->
-<div class="back-container">
-  <a href="index.html" class="back-btn">⬅ الرجوع للرئيسية</a>
-</div>
-
-<!-- ===== WHATSAPP FLOAT ===== -->
-<a href="https://wa.me/212600000000" class="whatsapp-float" target="_blank">💬</a>
+    searchInput.addEventListener("keyup", function () {
+      const value = searchInput.value.toLowerCase();
+      cards.forEach(card => {
+        card.style.display = card.innerText.toLowerCase().includes(value) ? "block" : "none";
+      });
+    });
+  </script>
 
 </body>
 </html>
-
