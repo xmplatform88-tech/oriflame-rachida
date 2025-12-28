@@ -1,72 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: Tahoma, Arial;
-  background: #fff;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #fafafa;
   color: #333;
 }
 
+/* ===== HEADER ===== */
 .top {
   background: linear-gradient(135deg, #ec5fa2, #c94fa0);
   color: white;
-  padding: 40px 20px;
+  padding: 60px 20px;
   text-align: center;
+}
+
+.top h1 {
+  margin-bottom: 10px;
+  font-size: 34px;
+}
+
+.top p {
+  opacity: 0.9;
+  font-size: 16px;
 }
 
 .search {
-  margin-top: 20px;
-  padding: 12px;
-  width: 80%;
-  max-width: 400px;
+  margin-top: 25px;
+  padding: 14px 20px;
+  width: 100%;
+  max-width: 420px;
   border-radius: 30px;
   border: none;
+  font-size: 15px;
 }
 
+/* ===== CONTAINER ===== */
+.sections,
+.week,
+.reviews,
+.actions {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ===== SECTIONS ===== */
 .sections {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 60px 20px;
 }
 
 .card {
-  background: #fff;
-  border-radius: 20px;
-  padding: 25px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  background: white;
+  border-radius: 24px;
+  padding: 35px 25px;
   text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
 }
 
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h2 {
+  color: #c2187a;
+  margin-bottom: 10px;
+}
+
+/* ===== PRODUCT OF WEEK ===== */
 .week {
-  background: #fdf2f7;
-  padding: 40px;
+  background: #fff0f6;
+  padding: 70px 20px;
+  text-align: center;
+  border-radius: 40px;
+  margin-bottom: 60px;
+}
+
+.week h2 {
+  color: #c2187a;
+  margin-bottom: 15px;
+}
+
+/* ===== REVIEWS ===== */
+.reviews {
+  padding: 60px 20px;
   text-align: center;
 }
 
-.reviews {
-  padding: 40px;
-  background: #fff;
+.reviews h2 {
+  color: #c2187a;
+  margin-bottom: 30px;
 }
 
 .review {
-  background: #f7f7f7;
-  padding: 15px;
-  margin: 10px auto;
-  max-width: 500px;
-  border-radius: 15px;
+  background: white;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 520px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
 }
 
+/* ===== ACTIONS ===== */
 .actions {
+  padding: 60px 20px;
   text-align: center;
-  padding: 40px;
 }
 
 .btn {
   display: inline-block;
-  margin: 10px;
-  padding: 15px 30px;
-  border-radius: 30px;
+  margin: 12px;
+  padding: 16px 38px;
+  border-radius: 40px;
   text-decoration: none;
+  font-weight: bold;
   color: white;
+  transition: opacity 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.85;
 }
 
 .catalog {
@@ -77,9 +135,11 @@ body {
   background: #ec5fa2;
 }
 
+/* ===== FOOTER ===== */
 footer {
   text-align: center;
-  padding: 20px;
-  background: #fafafa;
+  padding: 25px;
+  background: #fff;
   font-size: 14px;
+  color: #777;
 }
