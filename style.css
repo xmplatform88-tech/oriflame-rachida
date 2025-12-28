@@ -1,145 +1,101 @@
+/* إعدادات عامة */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Cairo", Arial, sans-serif;
 }
 
 body {
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, sans-serif;
-  background: #fafafa;
+  background: #f7f7fb;
   color: #333;
+  line-height: 1.6;
 }
 
-/* ===== HEADER ===== */
-.top {
-  background: linear-gradient(135deg, #ec5fa2, #c94fa0);
+/* الهيدر */
+.header {
+  background: linear-gradient(135deg, #e91e63, #f06292);
   color: white;
-  padding: 60px 20px;
   text-align: center;
-}
-
-.top h1 {
-  margin-bottom: 10px;
-  font-size: 34px;
-}
-
-.top p {
-  opacity: 0.9;
-  font-size: 16px;
-}
-
-.search {
-  margin-top: 25px;
-  padding: 14px 20px;
-  width: 100%;
-  max-width: 420px;
-  border-radius: 30px;
-  border: none;
-  font-size: 15px;
-}
-
-/* ===== CONTAINER ===== */
-.sections,
-.week,
-.reviews,
-.actions {
-  max-width: 1100px;
-  margin: auto;
-}
-
-/* ===== SECTIONS ===== */
-.sections {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
   padding: 60px 20px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
 
-.card {
-  background: white;
-  border-radius: 24px;
-  padding: 35px 25px;
-  text-align: center;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-}
-
-.card h2 {
-  color: #c2187a;
+.header h1 {
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-/* ===== PRODUCT OF WEEK ===== */
-.week {
-  background: #fff0f6;
-  padding: 70px 20px;
-  text-align: center;
-  border-radius: 40px;
-  margin-bottom: 60px;
+.header p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
 }
 
-.week h2 {
-  color: #c2187a;
-  margin-bottom: 15px;
-}
-
-/* ===== REVIEWS ===== */
-.reviews {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.reviews h2 {
-  color: #c2187a;
-  margin-bottom: 30px;
-}
-
-.review {
-  background: white;
-  padding: 20px;
-  margin: 15px auto;
-  max-width: 520px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-}
-
-/* ===== ACTIONS ===== */
-.actions {
-  padding: 60px 20px;
-  text-align: center;
-}
-
+/* زر */
 .btn {
   display: inline-block;
-  margin: 12px;
-  padding: 16px 38px;
-  border-radius: 40px;
+  background: white;
+  color: #e91e63;
+  padding: 12px 28px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  color: white;
-  transition: opacity 0.3s;
+  transition: 0.3s;
 }
 
 .btn:hover {
-  opacity: 0.85;
+  background: #fce4ec;
 }
 
-.catalog {
-  background: #6a1b9a;
-}
-
-.back {
-  background: #ec5fa2;
-}
-
-/* ===== FOOTER ===== */
-footer {
+/* القسم */
+.products {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
   text-align: center;
-  padding: 25px;
-  background: #fff;
-  font-size: 14px;
-  color: #777;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #e91e63;
+  margin-bottom: 40px;
+}
+
+/* الكروت */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card h3 {
+  color: #e91e63;
+  margin-bottom: 10px;
+}
+
+/* زر واتساب العائم */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #25d366;
+  color: white;
+  font-size: 24px;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
