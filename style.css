@@ -301,3 +301,19 @@ p {
   font-size: 14px;
   color: #666;
 }
+.add-to-cart-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background: #c2185b;
+  transform: translateY(-2px);
+}
