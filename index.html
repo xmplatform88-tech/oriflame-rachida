@@ -2,39 +2,94 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>Oriflame مع رشيدة</title>
-  <link rel="stylesheet" href="style.css">
+  <title>جمالك مع رشيدة</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
-<a href="https://wa.me/212687984742" class="whatsapp-float" target="_blank">💬</a>
 <body>
 
-  <header class="header">
-    <h1>Oriflame مع رشيدة</h1>
-    <p>منتجات Oriflame الأصلية 🌸</p>
-    <a href="products.html" class="btn">شوفي المنتجات</a>
-  </header>
+<header class="header">
+  <h1>جمالك مع رشيدة</h1>
+  <p>منتجات Oriflame الأصلية 🌸</p>
+  <a href="products.html" class="btn">شوفي المنتجات</a>
+</header>
 
-  <section class="why">
-    <h2>لماذا تختارين Oriflame؟ رشيدة</h2>
-
-    <div class="product-grid">
-      <div class="product-card">
-        <h3>✔️ منتجات أصلية</h3>
-        <p>جودة عالية ومضمونة</p>
-      </div>
-
-      <div class="product-card">
-        <h3>🚚 توصيل سريع</h3>
-        <p>حتى لباب دارك</p>
-      </div>
-
-      <div class="product-card">
-        <h3>💬 طلب سهل</h3>
-        <p>عبر واتساب</p>
-      </div>
+<!-- قسم لماذا تختارين Oriflame -->
+<section class="why">
+  <h2>لماذا تختارين Oriflame؟</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <h3>✔️ منتجات أصلية</h3>
+      <p>جودة عالية ومضمونة</p>
     </div>
-  </section>
+    <div class="product-card">
+      <h3>🚚 توصيل سريع</h3>
+      <p>حتى لباب دارك</p>
+    </div>
+    <div class="product-card">
+      <h3>💬 طلب سهل</h3>
+      <p>عبر واتساب</p>
+    </div>
+  </div>
+</section>
+
+<!-- قسم المنتجات الأكثر مبيعًا -->
+<section class="best-sellers">
+  <h2 class="section-title">🔥 الأكثر مبيعًا</h2>
+  <div class="products-grid">
+
+    <div class="product-card">
+      <img src="images/makeup1.jpg" alt="أحمر شفاه" onclick="openImage(this.src)">
+      <h3>أحمر شفاه Oriflame</h3>
+      <p>لون ثابت وناعم</p>
+      <button onclick="addToCart('أحمر شفاه Oriflame')">أضف للسلة</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/perfume1.jpg" alt="عطر نسائي" onclick="openImage(this.src)">
+      <h3>عطر نسائي أنيق</h3>
+      <p>رائحة ناعمة تدوم طويلاً</p>
+      <button onclick="addToCart('عطر نسائي أنيق')">أضف للسلة</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/skincare1.jpg" alt="كريم مرطب" onclick="openImage(this.src)">
+      <h3>كريم مرطب للبشرة</h3>
+      <p>ترطيب عميق ونعومة</p>
+      <button onclick="addToCart('كريم مرطب للبشرة')">أضف للسلة</button>
+    </div>
+
+  </div>
+  <p>🛒 عدد المنتجات في السلة: <span id="cart-count">0</span></p>
+  <button onclick="sendWhatsAppOrder()" class="btn">أرسل الطلب عبر واتساب 💬</button>
+</section>
+
+<!-- نافذة تكبير الصورة -->
+<div id="imageModal" class="image-modal" onclick="closeImage()">
+  <img id="modalImg">
+</div>
+
+<!-- زر واتساب العائم -->
+<a href="https://wa.me/212687984742" class="whatsapp-float" target="_blank">💬</a>
+
+<script>
+let cart = [];
+function addToCart(productName) { 
+  cart.push(productName); 
+  document.getElementById("cart-count").innerText = cart.length; 
+}
+function sendWhatsAppOrder() { 
+  if(cart.length===0){ alert("السلة فارغة!"); return; } 
+  window.open("https://wa.me/212687984742?text=" + encodeURIComponent("أريد شراء هذه المنتجات:\n" + cart.join("\n")), "_blank"); 
+}
+function openImage(src){ 
+  document.getElementById("modalImg").src = src; 
+  document.getElementById("imageModal").style.display="flex"; 
+}
+function closeImage(){ 
+  document.getElementById("imageModal").style.display="none"; 
+}
+</script>
 
 </body>
 </html>
